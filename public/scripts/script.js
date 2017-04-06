@@ -35,12 +35,12 @@ $ ( () => {
       datasets: [
           {
               label: "The First Dataset",
-              fillColor: "rgba(121, 252, 252,0.2)",
-              strokeColor: "rgba(121, 252, 252,1)",
-              pointColor: "rgba(121, 252, 252,1)",
+              fillColor: "rgba(143, 206, 232,0.2)",
+              strokeColor: "rgba(143, 206, 232,1)",
+              pointColor: "rgba(143, 206, 232,1)",
               pointStrokeColor: "#fff",
               pointHighlightFill: "#fff",
-              pointHighlightStroke: "rgba(121, 252, 252,1)",
+              pointHighlightStroke: "rgba(143, 206, 232,1)",
               data: [100, 34, 21, 56, 23]
           }
       ]
