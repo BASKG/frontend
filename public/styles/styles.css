@@ -10,6 +10,7 @@ body {
   margin: 0 auto;
   font-family: 'Comfortaa', cursive;
   color: white;
+  align-items: center;
 
 }
 
@@ -19,9 +20,15 @@ h1 {
   text-shadow: 10px;
   margin: 5px;
 }
+ .sec {
+  font-size: 40pt;
+ }
 header {
   text-align: center;
   background: rgba(121, 252, 252, .5);
+  width: 95%;
+  padding: 1%;
+  border: solid white 1px;
 }
 .main {
   border: solid black 2px;
