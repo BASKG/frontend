@@ -6,6 +6,7 @@
   <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
   <script type="text/javascript" src="/scripts/jquery.js"></script>
   <script type="text/javascript" src="/scripts/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
   <link rel="stylesheet" type="text/css" href="../styles/styles.css">
 </head>
 <body>
@@ -15,10 +16,33 @@
         <h1>Fairbnb</h1>
         <p> Check Airbnb Listings before you rent </p>
     </header>
-      <form action="">
-        <input type="text" placeholder="Enter Airbnb URL">
+      <form id="submit">
+        <input name='listing' type="text" placeholder="Enter Airbnb URL">
         <button>Check Price</button>
         </form>
+  </div>
+
+    <div id="showContainer">
+    <div class="show-container">
+      <div class="results">
+        <div>
+          <div>Predicted Price:
+          <span class="predicted-responce"></span>
+          </div>
+        </div>
+        <div>
+          <div>Actual Price:
+          <span class="actual-responce"></span>
+          </div>
+        </div>
+        <div class="yes-or-no">
+        </div>
+      </div>
+      <div class="graphs">
+          <h2>Average Price Per NYC Borough</h2>
+          <canvas id="myChart" width="200" height="200"></canvas>
+      </div>
+    </div>
   </div>
 </body>
 </html>
