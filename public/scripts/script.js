@@ -4,27 +4,35 @@ $ ( () => {
 
   console.log('jquery land');
 
-  const dsiCall = function(listing) {
-    // beginning of ajax post, using data from user
-   $.ajax({
-      url: 'http://localhost:4000/predict?listing=' + listing,
-      method: 'POST',
-      data: $('#list').serialize(),
-      // body: user input goes here
-      success: function(data) {
-        console.log('data: --------------');
-        console.log(data);
-      }
-    });
-  }
+      $('#submit').submit(function(e){
+        e.preventDefault();
+
+        $.ajax({
+          url: 'http://localhost:4000/predict',
+          type: 'POST',
+          dataType: 'json',
+          // body: user input goes here
+          data: $('#submit').serialize(),
+          success: (data) => {
+            console.log('data: --------------');
+            console.log(data);
+            console.log(data.actual_price);
+            console.log(data.predicted_price);
 
 
-      $('button').click(function() {
-        const listing = $('input').val();
-        dsiCall(listing);
+            $('#showContainer').css("visibility", "visible");
+            $('.predicted-responce').append("$" + parseFloat(data.predicted_price).toFixed(2));
+            $('.actual-responce').append("$" + parseFloat(data.actual_price).toFixed(2));
 
-        console.log(listing);
-    });
+            if(data.predicted_price > data.actual_price) {
+                $('.yes-or-no').append('WHAT A DEAL!').css('color', 'green');
+            } else {
+                $('.yes-or-no').append('NO WAY!').css('color', 'red');
+            }
+
+          }
+            })
+        });
 
 
 
