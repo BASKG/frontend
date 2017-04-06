@@ -10,43 +10,27 @@
   <link rel="stylesheet" type="text/css" href="../styles/styles.css">
 </head>
 <body>
-<div id="showContainer">
-  <header>
-    <h1>Fairbnb</h1>
-    <p> See how your Airbnb price compares... </p>
-  </header>
-  <div class="results">
-    <div>
-      <div>Predicted Price:</div>
-      <div class="predicted-responce"></div>
+  <div id="showContainer">
+    <header>
+      <h1>FAirbnb</h1>
+      <p> See how your Airbnb price compaires... </p>
+    </header>
+    <div class="show-container">
+      <div class="results">
+        <div>
+          <div>Predicted Price:</div>
+          <div class="predicted-responce"></div>
+        </div>
+        <div>
+          <div>Actual Price:</div>
+          <div class="actual-responce"></div>
+        </div>
+      </div>
+      <div class="graphs">
+          <h2>Average Price Per NYC Burrow</h2>
+          <canvas id="myChart" width="200" height="200"></canvas>
+      </div>
     </div>
-    <div>
-      <div>Actual Price:</div>
-      <div class="actual-responce"></div>
-    </div>
-  </div>
-  <div class="graphs">
-    <div>
-      <h2>Manhattan</h2>
-      <canvas id="myChart" width="175" height="225"></canvas>
-    </div>
-    <div>
-      <h2>The Bronx</h2>
-      <canvas id="myChart2" width="175" height="225"></canvas>
-    </div>
-    <div>
-      <h2>Queens</h2>
-      <canvas id="myChart3" width="175" height="225"></canvas>
-    </div>
-    <div>
-      <h2>Brooklyn</h2>
-      <canvas id="myChart4" width="175" height="225"></canvas>
-    </div>
-    <div>
-      <h2>Staten Island</h2>
-      <canvas id="myChart5" width="175" height="225"></canvas>
-    </div>
-  </div>
   </div>
 </body>
 </html>
