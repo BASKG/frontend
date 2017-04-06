@@ -5,13 +5,24 @@ $ ( () => {
   console.log('jquery land');
 
   // beginning of ajax post, using data from user
+  const getData = () => {
   $.ajax({
     url: 'localhost:4000',
     type: 'GET',
     success: data => {
       console.log('data');
     }
-  });
+  })};
+
+
+      $('button').click(function() {
+        const listing = $('input').val();
+        getData(listing);
+
+        console.log(listing);
+    });
+
+
 
 $(function () {
 
