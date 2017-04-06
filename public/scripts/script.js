@@ -6,9 +6,10 @@ $ ( () => {
 
   const dsiCall = () => {
     // beginning of ajax post, using data from user
-    $.ajax({
-      url: 'localhost:4000',
-      type: 'GET',
+   $.ajax({
+      url: '/api/show',
+      type: 'POST',
+      // body: user input goes here
       success: data => {
         console.log('data: --------------');
         console.log(data);
