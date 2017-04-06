@@ -9,7 +9,7 @@ $ ( () => {
     url: 'localhost:4000',
     type: 'GET',
     success: data => {
-      console.log('data')
+      console.log('data');
     }
   });
 
