@@ -10,20 +10,24 @@
   <link rel="stylesheet" type="text/css" href="../styles/styles.css">
 </head>
 <body>
-  <div>
-    <h1>What's Your Airbnb Price?</h1>
+<div id="showConatiner">
+  <header>
+    <h1>FAirbnb</h1>
+    <p> See how your Airbnb price compaires... </p>
+  </header>
+  <div class="results">
+    <div>
+      <div>Predicted Price:</div>
+      <div class="predicted-responce"></div>
+    </div>
+    <div>
+      <div>Actual Price:</div>
+      <div class="actual-responce"></div>
+    </div>
   </div>
-  <div>
-    <div>Predicted Price:</div>
-    <div class="predicted-responce"></div>
-  </div>
-  <div>
-    <div>Actual Price:</div>
-    <div class="actual-responce"></div>
-  </div>
-
   <div>
     <canvas id="myChart" width="400" height="400"></canvas>
+  </div>
   </div>
 </body>
 </html>
