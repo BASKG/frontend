@@ -4,13 +4,14 @@ $ ( () => {
 
   console.log('jquery land');
 
-  const dsiCall = () => {
+  const dsiCall = function(listing) {
     // beginning of ajax post, using data from user
    $.ajax({
-      url: '/api/show',
-      type: 'POST',
+      url: 'http://localhost:4000/predict?listing=' + listing,
+      method: 'POST',
+      data: $('#list').serialize(),
       // body: user input goes here
-      success: data => {
+      success: function(data) {
         console.log('data: --------------');
         console.log(data);
       }
@@ -20,7 +21,7 @@ $ ( () => {
 
       $('button').click(function() {
         const listing = $('input').val();
-        getData(listing);
+        dsiCall(listing);
 
         console.log(listing);
     });
