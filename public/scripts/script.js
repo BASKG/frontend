@@ -16,6 +16,15 @@ $ ( () => {
     });
   }
 
+
+      $('button').click(function() {
+        const listing = $('input').val();
+        getData(listing);
+
+        console.log(listing);
+    });
+
+
   // Step 3. Create a data object
   var data = {
       labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -90,4 +99,3 @@ $ ( () => {
   });
 
 });
-
