@@ -21,6 +21,7 @@ body {
   justify-content: center;
   flex-direction: column;
   margin: 3% auto;
+  visibility: hidden;
 }
 
 h1 {
