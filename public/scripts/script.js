@@ -4,15 +4,17 @@ $ ( () => {
 
   console.log('jquery land');
 
-  // beginning of ajax post, using data from user
-  const getData = () => {
-  $.ajax({
-    url: 'localhost:4000',
-    type: 'GET',
-    success: data => {
-      console.log('data');
-    }
-  })};
+  const dsiCall = () => {
+    // beginning of ajax post, using data from user
+    $.ajax({
+      url: 'localhost:4000',
+      type: 'GET',
+      success: data => {
+        console.log('data: --------------');
+        console.log(data);
+      }
+    });
+  }
 
 
       $('button').click(function() {
@@ -22,9 +24,6 @@ $ ( () => {
         console.log(listing);
     });
 
-
-
-$(function () {
 
   // Step 3. Create a data object
   var data = {
@@ -98,7 +97,5 @@ $(function () {
       //Boolean - Whether to fill the dataset with a colour
       datasetFill : true,
   });
-
-});
 
 });
