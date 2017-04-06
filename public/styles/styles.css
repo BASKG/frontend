@@ -16,6 +16,10 @@ body {
 }
 
 #showContainer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   margin: 3% auto;
 }
 
@@ -26,8 +30,10 @@ h1 {
   margin: 5px;
 }
 header {
-  background: rgba(121, 252, 252, .6);
+  background: rgba(121, 252, 252, 0.6);
+  border: solid white 2px;
   border-radius: 10px;
+  box-shadow: 2px 2px rgba(150,150,150,0.6);
   padding: 10px;
   text-align: center;
   width: 75%;
@@ -37,16 +43,14 @@ form {
   height: 30%;
   border: solid white 2px;
   border-radius: 10px;
-  background: rgba(150, 150, 150, .9);
+  background: rgba(150, 150, 150, 0.9);
+  box-shadow: 2px 2px rgba(121, 252, 252, 0.6);
   align-items: center;
   display: flex;
   justify-content: center;
   padding: 15px 10px 15px 10px;
   width: 65%;
   margin: 3% auto;
-}
-
-.form {
 }
 
 p{
@@ -75,8 +79,16 @@ button {
 /*Show Page*/
 
 .results {
-  align-items:  center;
+  border: solid white 2px;
+  border-radius: 10px;
+  background: rgba(150, 150, 150, 0.9);
+  box-shadow: 2px 2px rgba(121, 252, 252, 0.6);
+  align-items: center;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  padding: 15px 10px 15px 10px;
+  width: 35%;
+  margin: 3% auto;
 }
 
