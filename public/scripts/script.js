@@ -27,7 +27,7 @@ $ ( () => {
         console.log(linkBack());
 
         $.ajax({
-          url: 'http://localhost:4000/predict',
+          url: 'http://ec2-54-175-131-149.compute-1.amazonaws.com/myapp/predict',
           type: 'POST',
           dataType: 'json',
           // body: user input goes here
@@ -57,27 +57,30 @@ $ ( () => {
                   window.open('https://www.airbnb.com/')
             });
             }
+            }, error: msg => {
+              console.log(msg);
             }
         });
       });
 
+//Json data for graph on index page
+var data = [{"name": "Bronx", "average": 127.62350597609561}, {"name": "Brooklyn", "average": 138.09337075868902}, {"name": "Staten Island", "average": 134.35114503816794}, {"name": "Manhattan", "average": 142.2040415788326}, {"name": "Queens", "average": 142.4081696289367}];
 
-
-
+console.log(data[0].name);
 
 //Data info for graph
-  var data = {
-      labels: ["Manhattan", "The Bronx", "Queens", "Brooklyn", "Staten Island"],
+  var dataGraph = {
+      labels: [data[3].name, data[0].name, data[4].name, data[1].name, data[2].name],
       datasets: [
           {
-              label: "The First Dataset",
+              label: "Main",
               fillColor: "rgba(143, 206, 232,0.2)",
               strokeColor: "rgba(143, 206, 232,1)",
               pointColor: "rgba(143, 206, 232,1)",
               pointStrokeColor: "#fff",
               pointHighlightFill: "#fff",
               pointHighlightStroke: "rgba(143, 206, 232,1)",
-              data: [100, 34, 21, 56, 23]
+              data: [parseFloat(data[3].average).toFixed(2), parseFloat(data[0].average).toFixed(2), parseFloat(data[4].average).toFixed(2), parseFloat(data[1].average).toFixed(2), parseFloat(data[2].average).toFixed(2)]
           }
       ]
   };
@@ -115,6 +118,6 @@ $ ( () => {
 
   // Setup graphs
   var ctx = document.getElementById("myChart").getContext("2d");
-  var myNewChart = new Chart(ctx).Line(data, graphInfo);
+  var myNewChart = new Chart(ctx).Line(dataGraph, graphInfo);
 
 });
