@@ -52,7 +52,7 @@ header {
 }
 
 form {
-  height: 30%;
+  height: 25%;
   border: solid white 2px;
   border-radius: 10px;
   background: rgba(150, 150, 150, 0.9);
@@ -60,7 +60,7 @@ form {
   align-items: center;
   display: flex;
   justify-content: center;
-  padding: 15px 10px 15px 10px;
+  padding: 5px;
   width: 65%;
   margin: 3% auto;
 }
@@ -74,11 +74,11 @@ p{
 
 input {
   height: 60%;
-  width: 50%;
+  width: 55%;
   font-family: 'Comfortaa', cursive;
   text-align: center;
   font-size: 16pt;
-  margin-right: 5%;
+  margin: 0 4% 0 4%;
 }
 
 button {
@@ -97,7 +97,14 @@ button:hover {
   box-shadow: 2px 2px rgba(150,150,150, 0.5);
 }
 
-/*Show Page*/
+.refresh-button {
+  background: url('../images/refresh.png') no-repeat;
+  height: 50px;
+  margin: 2% 0 0 4%;
+  width: 56px;
+}
+
+/*Results section*/
 
 .results {
   border: solid white 2px;
@@ -145,11 +152,15 @@ canvas {
 
 .yes {
   color: green;
+  font-weight: 700;
+  text-shadow: 1px 1px rgba(250,250,250,0.5);
   padding: 5px;
 }
 
 .no {
   color: red;
+  font-weight: 700;
+  text-shadow: 1px 1px rgba(250,250,250,0.5);
   padding: 5px;
 }
 
@@ -177,6 +188,12 @@ canvas {
 }
 
 .italics {
+  color:white;
   font-style: italic;
   font-size: 12px;
+}
+
+.yes-or-no {
+  font-weight: 700;
+  margin: 10px;
 }
