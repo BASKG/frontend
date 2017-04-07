@@ -4,12 +4,27 @@ $ ( () => {
 
   console.log('jquery land');
 
+      $('.refresh-button').on('click', function(e){
+        e.preventDefault();
+        window.location.reload();
+      })
 
       $('#submit').submit(function(e){
         e.preventDefault();
 
-        let info = $('input').val();
+        var info = $('input').val();
         console.log(info);
+        console.log(info.charCodeAt());
+
+        var linkBack = function() {
+          if( info.charCodeAt() > 50) {
+            return info
+          } else {
+            return 'https://www.airbnb.com/rooms/'+ info
+          }
+        }
+
+        console.log(linkBack());
 
         $.ajax({
           url: 'http://localhost:4000/predict',
@@ -28,14 +43,14 @@ $ ( () => {
             $('.actual-responce').append("$" + parseFloat(data.actual_price).toFixed(2));
 
             if(data.predicted_price > data.actual_price) {
-                $('.yes-or-no').html('WHAT A DEAL!<br><span class="italics">You save $' + parseFloat(data.predicted_price - data.actual_price).toFixed(2) + ' below the average price in this area!</span>').addClass('yes');
+                $('.yes-or-no').html('<span class="yes">WHAT A DEAL!</span><br><span class="italics">You save $' + parseFloat(data.predicted_price - data.actual_price).toFixed(2) + ' below the average price in this area!</span>');
                 $('.button-airbnb').html('<button class="yes-button">Book Now!</button>');
                 $('.yes-button').on('click', function() {
-                  window.open('https://www.airbnb.com/rooms/'+ info);
+                  window.open(linkBack());
                 });
 
             } else {
-                $('.yes-or-no').append('NO WAY!<br><span class="italics">This price is $'+ parseFloat(data.actual_price - data.predicted_price).toFixed(2) + ' above the average price in this area!</span>').addClass('no');
+                $('.yes-or-no').append('<span class="no">NO WAY!</span><br><span class="italics">This price is $'+ parseFloat(data.actual_price - data.predicted_price).toFixed(2) + ' above the average price in this area!</span>');
                 $('.button-airbnb').html('<button class="no-button">Find something new...</button>');
                 $('.no-button').on('click', function() {
                   window.open('https://www.airbnb.com/')
