@@ -4,14 +4,11 @@ $ ( () => {
 
   console.log('jquery land');
 
-<<<<<<< HEAD
-=======
       $('.refresh-button').on('click', function(e){
         e.preventDefault();
         window.location.reload();
       })
 
->>>>>>> edc0de847f54428cb54676b2363b85957beac625
       $('#submit').submit(function(e){
         e.preventDefault();
 
