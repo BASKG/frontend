@@ -1,0 +1,225 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url("../images/couch.jpg") no-repeat;
+  background-size: cover;
+  font-family: 'Comfortaa', cursive;
+  color: white;
+}
+
+#indexContainer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 3% auto;
+}
+
+#showContainer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 3% auto;
+  visibility: hidden;
+}
+
+h1 {
+  font-size: 50pt;
+  letter-spacing: 10px;
+  text-shadow: 3px 3px rgba(150,150,150,0.6);
+  margin: 5px;
+}
+
+h2 {
+  color: grey;
+  text-align: center;
+  padding: 0px;
+}
+
+ .sec {
+  font-size: 40pt;
+ }
+
+header {
+  background: rgba(143, 206, 232, 0.8);
+  border: solid white 2px;
+  border-radius: 10px;
+  box-shadow: 2px 2px rgba(150,150,150,0.6);
+  padding: 5px;
+  text-align: center;
+  width: 75%;
+}
+
+form {
+  height: 25%;
+  border: solid white 2px;
+  border-radius: 10px;
+  background: rgba(150, 150, 150, 0.9);
+  box-shadow: 2px 2px rgba(143, 206, 232, 0.6);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  width: 65%;
+  margin: 3% auto;
+}
+
+p{
+  color: grey;
+  text-shadow: 2px 2px rgba(250,250,250,0.6);
+  margin: 10px 0 5px 0;
+  padding: 0px;
+}
+
+input {
+  height: 60%;
+  width: 55%;
+  font-family: 'Comfortaa', cursive;
+  text-align: center;
+  font-size: 16pt;
+  margin: 0 4% 0 4%;
+}
+
+button {
+  height: 60%;
+  width: 20%;
+  border-radius: 5%;
+  color: white;
+  font-size: 14pt;
+  background: grey;
+  box-shadow: 2px 2px rgba(250,250,250, 0.5);
+}
+
+button:hover {
+  background-color: white;
+  color: grey;
+  box-shadow: 2px 2px rgba(150,150,150, 0.5);
+}
+
+.refresh-button {
+  background: url('../images/refresh.png') no-repeat;
+  height: 50px;
+  margin: 2% 0 0 4%;
+  width: 56px;
+}
+
+/*Results section*/
+
+.results {
+  border: solid white 2px;
+  border-radius: 10px;
+  background: rgba(150, 150, 150, 0.95);
+  box-shadow: 2px 2px rgba(143, 206, 232, 0.6);
+  height: 35%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px 10px 15px 10px;
+  text-align: center;
+  width: 50%;
+  margin: 5%;
+}
+
+canvas {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.graphs {
+  background-color: rgba(250,250,250,0.9);
+  border: solid rgb(143, 206, 232) 2px;
+  border-radius: 10px;
+  box-shadow: 2px 2px rgba(150, 150, 150, 0.6);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+}
+
+.show-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.yes {
+  color: green;
+  font-weight: 700;
+  text-shadow: 1px 1px rgba(250,250,250,0.5);
+  padding: 5px;
+}
+
+.no {
+  color: red;
+  font-weight: 700;
+  text-shadow: 1px 1px rgba(250,250,250,0.5);
+  padding: 5px;
+}
+
+.answer {
+  color: white;
+  text-shadow: 1px 1px rgba(143, 206, 232,0.7);
+}
+
+.no-button {
+  width: 65%;
+  margin: 0 auto;
+}
+
+.yes-button {
+  width: 45%;
+  margin: 0 auto;
+}
+
+.button-airbnb {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.italics {
+  color:white;
+  font-style: italic;
+  font-size: 12px;
+}
+
+.yes-or-no {
+  font-weight: 700;
+  margin: 10px;
+}
+
+.help1 {
+  background: url('../images/help1.jpg');
+  height: 35px;
+  width: 596px;
+}
+
+.help2 {
+  background: url('../images/help2.jpg');
+  height: 35px;
+  width: 286px;
+}
+
+.graph2 {
+  background-color: rgba(250,250,250,0.9);
+  border: solid rgb(143, 206, 232) 2px;
+  border-radius: 10px;
+  box-shadow: 2px 2px rgba(150, 150, 150, 0.6);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+}
+
+

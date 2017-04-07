@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Index</title>
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
+  <script type="text/javascript" src="/scripts/jquery.js"></script>
+  <script type="text/javascript" src="/scripts/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+  <script type="text/javascript" src="/scripts/data.json"></script>
+  <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+</head>
+<body>
+  <div id="indexContainer">
+    <header>
+        <h1>Fairbnb</h1>
+        <p> Check Airbnb Listings before you rent </p>
+    </header>
+
+      <form id="submit">
+        <input name='listing' type="text" placeholder="Enter Airbnb ID or URL">
+        <button>Check Price</button>
+        <div class="refresh-button">
+        </div>
+        </form>
+  </div>
+
+    <div id="showContainer">
+    <div class="show-container">
+      <div class="results">
+        <div>
+          <div class="answer">Predicted Price:
+          <span class="predicted-responce"></span>
+          </div>
+        </div>
+        <div>
+          <div class="answer">Actual Price:
+          <span class="actual-responce"></span>
+          </div>
+        </div>
+        <div class="yes-or-no"></div>
+        <div class="button-airbnb"></div>
+      </div>
+      <div class="graphs">
+          <h2>Average Price Per Borough</h2>
+          <canvas id="myChart" width="300" height="200"></canvas>
+      </div>
+    </div>
+  </div>
+<!--   <div id="graphsContainer">
+        <div class="graph2">
+          <h2>Average Price Per Borough</h2>
+          <canvas id="myChart2" width="300" height="200"></canvas>
+      </div>
+  </div> -->
+</body>
+</html>
