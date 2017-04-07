@@ -2,6 +2,13 @@ console.log('vanilla land');
 
 $ ( () => {
 
+   window.onload=function(){
+     $(function(){
+         if(window.location.protocol==="https:")
+             window.location.protocol="http";
+     });
+ }
+
   console.log('jquery land');
 
       $('.refresh-button').on('click', function(e){
