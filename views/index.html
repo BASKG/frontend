@@ -10,14 +10,15 @@
   <link rel="stylesheet" type="text/css" href="../styles/styles.css">
 </head>
 <body>
-
+  <div class="refresh-button">
+  </div>
   <div id="indexContainer">
     <header>
         <h1>Fairbnb</h1>
         <p> Check Airbnb Listings before you rent </p>
     </header>
       <form id="submit">
-        <input name='listing' type="text" placeholder="Enter Airbnb URL">
+        <input name='listing' type="text" placeholder="Enter Airbnb ID">
         <button>Check Price</button>
         </form>
   </div>
@@ -26,21 +27,21 @@
     <div class="show-container">
       <div class="results">
         <div>
-          <div>Predicted Price:
+          <div class="answer">Predicted Price:
           <span class="predicted-responce"></span>
           </div>
         </div>
         <div>
-          <div>Actual Price:
+          <div class="answer">Actual Price:
           <span class="actual-responce"></span>
           </div>
         </div>
-        <div class="yes-or-no">
-        </div>
+        <div class="yes-or-no"></div>
+        <div class="button-airbnb"></div>
       </div>
       <div class="graphs">
-          <h2>Average Price Per NYC Borough</h2>
-          <canvas id="myChart" width="200" height="200"></canvas>
+          <h2>Average Price Per Borough</h2>
+          <canvas id="myChart" width="300" height="200"></canvas>
       </div>
     </div>
   </div>
