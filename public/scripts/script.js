@@ -8,6 +8,9 @@ $ ( () => {
       $('#submit').submit(function(e){
         e.preventDefault();
 
+        let info = $('input').val();
+        console.log(info);
+
         $.ajax({
           url: 'http://localhost:4000/predict',
           type: 'POST',
@@ -25,14 +28,22 @@ $ ( () => {
             $('.actual-responce').append("$" + parseFloat(data.actual_price).toFixed(2));
 
             if(data.predicted_price > data.actual_price) {
-                $('.yes-or-no').append('WHAT A DEAL!').css('color', 'green');
-            } else {
-                $('.yes-or-no').append('NO WAY!').css('color', 'red');
-            }
+                $('.yes-or-no').html('WHAT A DEAL!<br><span class="italics">You save $' + parseFloat(data.predicted_price - data.actual_price).toFixed(2) + ' below the average price in this area!</span>').addClass('yes');
+                $('.button-airbnb').html('<button class="yes-button">Book Now!</button>');
+                $('.yes-button').on('click', function() {
+                  window.open('https://www.airbnb.com/rooms/'+ info);
+                });
 
-          }
-            })
+            } else {
+                $('.yes-or-no').append('NO WAY!<br><span class="italics">This price is $'+ parseFloat(data.actual_price - data.predicted_price).toFixed(2) + ' above the average price in this area!</span>').addClass('no');
+                $('.button-airbnb').html('<button class="no-button">Find something new...</button>');
+                $('.no-button').on('click', function() {
+                  window.open('https://www.airbnb.com/')
+            });
+            }
+            }
         });
+      });
 
 
 
