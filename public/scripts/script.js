@@ -38,6 +38,7 @@ $ ( () => {
             console.log(data.actual_price);
             console.log(data.predicted_price);
 
+
             $('#showContainer').css("visibility", "visible");
             $('.predicted-responce').append("$" + parseFloat(data.predicted_price).toFixed(2));
             $('.actual-responce').append("$" + parseFloat(data.actual_price).toFixed(2));
