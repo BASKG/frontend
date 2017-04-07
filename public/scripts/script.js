@@ -27,7 +27,7 @@ $ ( () => {
         console.log(linkBack());
 
         $.ajax({
-          url: 'http://ec2-54-175-131-149.compute-1.amazonaws.com/myapp/predict',
+          url: 'http://localhost:4000/predict',
           type: 'POST',
           dataType: 'json',
           // body: user input goes here
