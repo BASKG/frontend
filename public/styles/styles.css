@@ -27,7 +27,7 @@ body {
 h1 {
   font-size: 50pt;
   letter-spacing: 10px;
-  text-shadow: 2px 2px rgba(150,150,150,0.5);
+  text-shadow: 3px 3px rgba(150,150,150,0.6);
   margin: 5px;
 }
 
@@ -42,11 +42,11 @@ h2 {
  }
 
 header {
-  background: rgba(143, 206, 232, 0.6);
+  background: rgba(143, 206, 232, 0.8);
   border: solid white 2px;
   border-radius: 10px;
   box-shadow: 2px 2px rgba(150,150,150,0.6);
-  padding: 10px;
+  padding: 5px;
   text-align: center;
   width: 75%;
 }
@@ -66,7 +66,9 @@ form {
 }
 
 p{
-  text-shadow: 1px 1px rgba(150,150,150,0.6);
+  color: grey;
+  text-shadow: 2px 2px rgba(250,250,250,0.6);
+  margin: 10px 0 5px 0;
   padding: 0px;
 }
 
@@ -85,7 +87,14 @@ button {
   border-radius: 5%;
   color: white;
   font-size: 14pt;
-  background: lightgrey;
+  background: grey;
+  box-shadow: 2px 2px rgba(250,250,250, 0.5);
+}
+
+button:hover {
+  background-color: white;
+  color: grey;
+  box-shadow: 2px 2px rgba(150,150,150, 0.5);
 }
 
 /*Show Page*/
@@ -93,7 +102,7 @@ button {
 .results {
   border: solid white 2px;
   border-radius: 10px;
-  background: rgba(150, 150, 150, 0.9);
+  background: rgba(150, 150, 150, 0.95);
   box-shadow: 2px 2px rgba(143, 206, 232, 0.6);
   height: 35%;
   align-items: center;
@@ -101,6 +110,7 @@ button {
   justify-content: center;
   flex-direction: column;
   padding: 15px 10px 15px 10px;
+  text-align: center;
   width: 50%;
   margin: 5%;
 }
@@ -121,7 +131,6 @@ canvas {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 5%;
   width: 50%;
 }
 
@@ -132,4 +141,42 @@ canvas {
   flex-direction: row;
   margin: 0 auto;
   width: 90%;
+}
+
+.yes {
+  color: green;
+  padding: 5px;
+}
+
+.no {
+  color: red;
+  padding: 5px;
+}
+
+.answer {
+  color: white;
+  text-shadow: 1px 1px rgba(143, 206, 232,0.7);
+}
+
+.no-button {
+  width: 65%;
+  margin: 0 auto;
+}
+
+.yes-button {
+  width: 45%;
+  margin: 0 auto;
+}
+
+.button-airbnb {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.italics {
+  font-style: italic;
+  font-size: 12px;
 }
